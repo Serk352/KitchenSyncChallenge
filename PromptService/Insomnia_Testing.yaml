@@ -1,0 +1,173 @@
+type: collection.insomnia.rest/5.0
+name: Scratch Pad
+meta:
+  id: wrk_scratchpad
+  created: 1758916547111
+  modified: 1758916547111
+  description: ""
+collection:
+  - url: http://localhost:3000/prompts
+    name: Get Basic
+    meta:
+      id: req_0a85979e56ef4f0883b9cca0088c0251
+      created: 1760564723851
+      modified: 1760565008038
+      isPrivate: false
+      description: ""
+      sortKey: -1760564723851
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.6.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/prompts
+    name: Post Basic
+    meta:
+      id: req_9ab212f5475e42f2b2ee9af47efbe3c2
+      created: 1760564851144
+      modified: 1760565282780
+      isPrivate: false
+      description: ""
+      sortKey: -1760564851144
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "type": "text",
+          "prompt": "What is the capital of Spain?"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/prompts/4460a59e-14ee-49a8-99a9-c5a74d92e3f7
+    name: Get By Id Basic
+    meta:
+      id: req_f9030735e1cc437f999e16dc5d8b3623
+      created: 1760565050940
+      modified: 1760565304676
+      isPrivate: false
+      description: ""
+      sortKey: -1760565050940
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.6.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/prompts/4460a59e-14ee-49a8-99a9-c5a74d92e3f7
+    name: Basic Update
+    meta:
+      id: req_ecde33f1d7a746f788e3c3522cdeda28
+      created: 1760565100946
+      modified: 1760565324193
+      isPrivate: false
+      description: ""
+      sortKey: -1760565100946
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "type": "text",
+          "prompt": "What is the capital of China?"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/prompts/4460a59e-14ee-49a8-99a9-c5a74d92e3f7
+    name: Basic Partial Update
+    meta:
+      id: req_222407560241473aa3fea04afa2becf7
+      created: 1760565169199
+      modified: 1760565338054
+      isPrivate: false
+      description: ""
+      sortKey: -1760565169199
+    method: PATCH
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "prompt": "Partially updated prompt"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/prompts/4460a59e-14ee-49a8-99a9-c5a74d92e3f7
+    name: Basic Delete
+    meta:
+      id: req_67076e1305d24e17a1bdcd5a211322bf
+      created: 1760565215286
+      modified: 1760565348098
+      isPrivate: false
+      description: ""
+      sortKey: -1760565215286
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/11.6.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1758916585407
+    modified: 1758916585407
+environments:
+  name: Base Environment
+  meta:
+    id: env_99d30891da4bdcebc63947a8fc17f076de878684
+    created: 1758916585392
+    modified: 1758916585392
+    isPrivate: false
