@@ -18,7 +18,7 @@ Prompt object shape:
 }
 */
 
-// Create
+//--> C(reate)
 router.post("/", (req, res) => {
       console.log("Authenticating token...");
     const {
@@ -53,7 +53,7 @@ router.post("/", (req, res) => {
     res.status(201).json(record);
 });
 
-// List (with optional filter & pagination)
+// List (with optional filter & pagination) --> R(ead)
 router.get("/", (req, res) => {
     const {
         type,
@@ -77,7 +77,7 @@ router.get("/", (req, res) => {
     res.json(items.slice(start, end));
 });
 
-// Get specific by id
+// Get specific by id --> R(ead)
 router.get("/:id", (req, res) => {
     const username = req.user && req.user.username;
     if (!username)
@@ -92,7 +92,7 @@ router.get("/:id", (req, res) => {
     res.json(found);
 });
 
-// Replace (PUT)
+// (PUT)  --> U(pdate)
 router.put("/:id", (req, res) => {
     const {
         type,
@@ -129,7 +129,7 @@ router.put("/:id", (req, res) => {
     res.json(updated);
 });
 
-// (PATCH)
+// (PATCH) --> U(pdate)
 router.patch("/:id", (req, res) => {
     const username = req.user && req.user.username;
     if (!username)
@@ -159,7 +159,7 @@ router.patch("/:id", (req, res) => {
     res.json(existing);
 });
 
-// Delete
+// --> D(elete)
 router.delete("/:id", (req, res) => {
     const username = req.user && req.user.username;
     if (!username)

@@ -1,0 +1,314 @@
+type: collection.insomnia.rest/5.0
+name: My first collection
+meta:
+  id: wrk_3f80838ba3ed40d8a929a34d639a8742
+  created: 1760566424064
+  modified: 1760566424064
+  description: ""
+collection:
+  - url: http://localhost:3000/register
+    name: RegisterUser
+    meta:
+      id: req_b3e9215d598b4b9aa3a183175a4e7ce0
+      created: 1760567093204
+      modified: 1760567168738
+      isPrivate: false
+      description: ""
+      sortKey: -1760567093204
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"username" : "Admin",
+        	"password": "Admin123"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/login
+    name: Login
+    meta:
+      id: req_d7dec35e0d8e46559b2ccc5f3cc6f2ac
+      created: 1760567172604
+      modified: 1760567217995
+      isPrivate: false
+      description: ""
+      sortKey: -1760567172604
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"username" : "Admin",
+        	"password": "Admin123"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.6.1
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/prompts
+    name: GetPrompts
+    meta:
+      id: req_c1a9d869a4904b3f92cdfb5e539c7df6
+      created: 1760567246637
+      modified: 1760567799279
+      isPrivate: false
+      description: ""
+      sortKey: -1760567246637
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.6.1
+        id: pair_02491ae18bc247ab8bacac998733ad36
+    authentication:
+      type: bearer
+      token: "{% response 'body', 'req_d7dec35e0d8e46559b2ccc5f3cc6f2ac',
+        'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/prompts
+    name: CreatePrompt
+    meta:
+      id: req_371365d3645a49e1afbb7f4a95854461
+      created: 1760567378912
+      modified: 1760567847117
+      isPrivate: false
+      description: ""
+      sortKey: -1760567378912
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"type" : "Text",
+        	"prompt": " why to use AI agents?"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_47a5b84b95154938ad2467129cff7c9e
+      - name: User-Agent
+        value: insomnia/11.6.1
+        id: pair_1ef6529342884624aee798707e4942d4
+    authentication:
+      type: bearer
+      token: "{% response 'body', 'req_d7dec35e0d8e46559b2ccc5f3cc6f2ac',
+        'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/prompts/384d287c-7396-44e2-bb6f-70b27c14bd9f
+    name: GetPromptById
+    meta:
+      id: req_f0acfbe7aead4b5daba86838ca8e4217
+      created: 1760567911507
+      modified: 1760567935870
+      isPrivate: false
+      description: ""
+      sortKey: -1760567379012
+    method: GET
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"type" : "Text",
+        	"prompt": " why to use AI agents?"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_47a5b84b95154938ad2467129cff7c9e
+      - name: User-Agent
+        value: insomnia/11.6.1
+        id: pair_1ef6529342884624aee798707e4942d4
+    authentication:
+      type: bearer
+      token: "{% response 'body', 'req_d7dec35e0d8e46559b2ccc5f3cc6f2ac',
+        'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/prompts/384d287c-7396-44e2-bb6f-70b27c14bd9f
+    name: UpdatePrompt
+    meta:
+      id: req_778db69275dc49b9805e5d13078b6fd0
+      created: 1760567950696
+      modified: 1760567983243
+      isPrivate: false
+      description: ""
+      sortKey: -1760567379112
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"type" : "Text",
+        	"prompt": " why to use AI agents or not?"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_47a5b84b95154938ad2467129cff7c9e
+      - name: User-Agent
+        value: insomnia/11.6.1
+        id: pair_1ef6529342884624aee798707e4942d4
+    authentication:
+      type: bearer
+      token: "{% response 'body', 'req_d7dec35e0d8e46559b2ccc5f3cc6f2ac',
+        'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/prompts/384d287c-7396-44e2-bb6f-70b27c14bd9f
+    name: PartialUpdatePrompt
+    meta:
+      id: req_794038347e444071beceedc8509da20a
+      created: 1760567997955
+      modified: 1760568008105
+      isPrivate: false
+      description: ""
+      sortKey: -1760567379212
+    method: PATCH
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"prompt": " why to use AI agents or?"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_47a5b84b95154938ad2467129cff7c9e
+      - name: User-Agent
+        value: insomnia/11.6.1
+        id: pair_1ef6529342884624aee798707e4942d4
+    authentication:
+      type: bearer
+      token: "{% response 'body', 'req_d7dec35e0d8e46559b2ccc5f3cc6f2ac',
+        'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/prompts/384d287c-7396-44e2-bb6f-70b27c14bd9f
+    name: DeletePrompt
+    meta:
+      id: req_1e359263bfcd41ee9789513030720ed8
+      created: 1760568032699
+      modified: 1760568057078
+      isPrivate: false
+      description: ""
+      sortKey: -1760567379312
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/11.6.1
+        id: pair_1ef6529342884624aee798707e4942d4
+    authentication:
+      type: bearer
+      token: "{% response 'body', 'req_d7dec35e0d8e46559b2ccc5f3cc6f2ac',
+        'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:3000/chat
+    name: ChatWithOpenAI
+    meta:
+      id: req_cc79480c2aae41499e62172ae481b466
+      created: 1760568072792
+      modified: 1760568132306
+      isPrivate: false
+      description: ""
+      sortKey: -1760567379412
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"prompt": "hi AI" 
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+        id: pair_47a5b84b95154938ad2467129cff7c9e
+      - name: User-Agent
+        value: insomnia/11.6.1
+        id: pair_1ef6529342884624aee798707e4942d4
+    authentication:
+      type: bearer
+      token: "{% response 'body', 'req_d7dec35e0d8e46559b2ccc5f3cc6f2ac',
+        'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_69d1d8bac1511c83d2fa11a42706cb71f7565327
+    created: 1760566424073
+    modified: 1760566424073
+environments:
+  name: Base Environment
+  meta:
+    id: env_69d1d8bac1511c83d2fa11a42706cb71f7565327
+    created: 1760566424071
+    modified: 1760566542298
+    isPrivate: false
+  data:
+    auth:
+      token: your_real_token_here
