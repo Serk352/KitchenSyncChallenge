@@ -40,8 +40,8 @@ promptservice/
 1. **Clone the repository**:
 
 ```bash
-git clone <repo-url>
-cd promptservice
+git clone https://github.com/Serk352/KitchenSyncChallenge.git
+cd KitchenSyncChallenge/PromptService
 ```
 
 2. **Install dependencies**:
